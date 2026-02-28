@@ -97,7 +97,7 @@ const App: React.FC = () => {
           onMemberAccessClick={() => setView('member_access')}
           onIntroducerDetails={handleIntroducerSelect}
           onPresentationClick={() => setView('presentation')}
-          onMembershipOfferClick={() => setView('discover_formations')}
+          onMembershipOfferClick={() => setView('presentation')}
           onAllFormationsClick={() => setView('trust_us')}
           onAdminDashboardClick={() => setView('admin_dashboard')}
           onCollaborateClick={() => setView('collaborate_creators')}
@@ -141,7 +141,7 @@ const App: React.FC = () => {
         return authenticatedAdminName ? <IndividualAdminView adminName={authenticatedAdminName} onLogout={handleLogout} /> : null;
       case 'presentation':
         return <PresentationView 
-          onBack={() => setView('discover_formations')} 
+          onBack={() => setView('home')} 
           onWebsiteClick={() => setView('website_presentation')}
           onJoinMember={() => {}} 
         />;
@@ -169,7 +169,7 @@ const App: React.FC = () => {
           onMemberAccessClick={() => setView('member_access')} 
           onIntroducerDetails={handleIntroducerSelect} 
           onPresentationClick={() => setView('presentation')}
-          onMembershipOfferClick={() => setView('discover_formations')}
+          onMembershipOfferClick={() => setView('presentation')}
           onAllFormationsClick={() => setView('trust_us')}
           onAdminDashboardClick={() => setView('admin_dashboard')}
           onCollaborateClick={() => setView('collaborate_creators')}

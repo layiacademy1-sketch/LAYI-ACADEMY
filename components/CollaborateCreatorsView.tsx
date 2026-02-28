@@ -16,7 +16,7 @@ const CREATORS: Creator[] = [
     subscribers: '9,4 millions',
     description: '2ᵉ influenceur de France',
     contact: 'nasdascollab@gmail.com',
-    imageUrl: 'https://picsum.photos/seed/nasdas/400/400'
+    imageUrl: 'https://image.noelshack.com/fichiers/2026/09/1/1771883541-136782524-847171155854426-8932989962663449589-n.jpg'
   },
   {
     id: 'hachemi',
@@ -26,19 +26,18 @@ const CREATORS: Creator[] = [
     subscribers: '12,7 millions',
     description: 'Expert en divertissement et lifestyle',
     contact: 'contact@hachemisb.com',
-    imageUrl: 'https://picsum.photos/seed/hachemi/400/400'
+    imageUrl: 'https://image.noelshack.com/fichiers/2026/09/1/1771883844-hachemi-b-studio.jpg'
   }
 ];
 
 const CollaborateCreatorsView: React.FC<CollaborateCreatorsViewProps> = ({ onBack }) => {
   const [searchCity, setSearchCity] = useState('');
   const [searchPrice, setSearchPrice] = useState('');
-  const [searchSubs, setSearchSubs] = useState('');
   const [selectedCreator, setSelectedCreator] = useState<Creator | null>(null);
 
   const hasFilter = useMemo(() => {
-    return searchCity.trim() !== '' || searchPrice.trim() !== '' || searchSubs.trim() !== '';
-  }, [searchCity, searchPrice, searchSubs]);
+    return searchCity.trim() !== '' || searchPrice.trim() !== '';
+  }, [searchCity, searchPrice]);
 
   const filteredCreators = useMemo(() => {
     if (!hasFilter) return [];
@@ -46,10 +45,9 @@ const CollaborateCreatorsView: React.FC<CollaborateCreatorsViewProps> = ({ onBac
     return CREATORS.filter(creator => {
       const matchCity = searchCity ? creator.city.toLowerCase().includes(searchCity.toLowerCase()) : true;
       const matchPrice = searchPrice ? creator.avgPrice <= parseInt(searchPrice) : true;
-      const matchSubs = searchSubs ? creator.subscribers.toLowerCase().includes(searchSubs.toLowerCase()) : true;
-      return matchCity && matchPrice && matchSubs;
+      return matchCity && matchPrice;
     });
-  }, [hasFilter, searchCity, searchPrice, searchSubs]);
+  }, [hasFilter, searchCity, searchPrice]);
 
   if (selectedCreator) {
     return (
@@ -114,7 +112,18 @@ const CollaborateCreatorsView: React.FC<CollaborateCreatorsViewProps> = ({ onBac
               </div>
 
               {/* Contact */}
-              <div className="pt-6 border-t border-white/10">
+              <div className="pt-6 border-t border-white/10 space-y-4">
+                <button 
+                  onClick={() => {
+                    const snapHandle = selectedCreator.id === 'nasdas' ? 'naslachiente' : 'hachemi95';
+                    window.open(`https://www.snapchat.com/add/${snapHandle}`, '_blank');
+                  }}
+                  className="w-full bg-[#FFFC00] text-black py-6 rounded-[28px] font-black uppercase text-[13px] tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-[#FFB000] transition-colors"
+                >
+                  <Star size={20} fill="currentColor" />
+                  Voir le Snapchat
+                </button>
+
                 <a 
                   href={`mailto:${selectedCreator.contact}`}
                   className="w-full bg-white text-black py-6 rounded-[28px] font-black uppercase text-[13px] tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-[#FFB000] transition-colors"
@@ -173,18 +182,6 @@ const CollaborateCreatorsView: React.FC<CollaborateCreatorsViewProps> = ({ onBac
                 placeholder="PRIX MAXIMUM (€)"
                 value={searchPrice}
                 onChange={(e) => setSearchPrice(e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-[10px] font-black uppercase tracking-widest focus:border-[#FFB000] outline-none transition-all"
-              />
-            </div>
-
-            {/* Subs Filter */}
-            <div className="relative">
-              <Users className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
-              <input 
-                type="text" 
-                placeholder="NOMBRE D'ABONNÉS (ex: 9,4 millions)"
-                value={searchSubs}
-                onChange={(e) => setSearchSubs(e.target.value)}
                 className="w-full bg-black/40 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-[10px] font-black uppercase tracking-widest focus:border-[#FFB000] outline-none transition-all"
               />
             </div>

@@ -171,25 +171,6 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
           </div>
         </div>
 
-        {/* Website Creation Section */}
-        <div className="px-2">
-          <button 
-            onClick={onWebsiteClick}
-            className="w-full glass-card p-6 rounded-[32px] border-white/10 bg-white/5 flex items-center justify-between group transition-all hover:border-[#FFB000]/30"
-          >
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 shadow-lg group-hover:rotate-12 transition-transform">
-                <Globe size={24} />
-              </div>
-              <div className="text-left">
-                <h3 className="text-lg font-black uppercase italic tracking-tighter text-white">Création site internet</h3>
-                <p className="text-[9px] text-[#FFB000] font-black uppercase tracking-widest italic">Découvrir nos offres</p>
-              </div>
-            </div>
-            <ChevronRight size={20} className="text-gray-600 group-hover:text-[#FFB000] group-hover:translate-x-1 transition-all" />
-          </button>
-        </div>
-
         {/* Features List */}
         <div className="space-y-6 px-2">
           <div className="relative p-8 rounded-[40px] border border-[#FFB000]/30 bg-gradient-to-b from-[#FFB000]/5 to-transparent overflow-hidden">

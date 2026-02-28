@@ -57,42 +57,10 @@ const HomeView: React.FC<HomeViewProps> = ({
           </div>
           <ChevronRight size={24} className="text-[#FFB000] group-hover:translate-x-1 transition-transform" />
         </button>
-
-        {/* Ils nous ont fait confiance Shortcut */}
-        <button 
-          onClick={onAllFormationsClick}
-          className="w-full glass-card p-6 rounded-[40px] border-white/10 bg-white/5 flex items-center justify-between group active:scale-95 transition-all shadow-xl"
-        >
-          <div className="flex items-center gap-5">
-            <div className="w-14 h-14 bg-gray-800 rounded-2xl flex items-center justify-center text-[#FFB000] shadow-lg group-hover:rotate-12 transition-transform">
-              <Eye size={28} />
-            </div>
-            <div className="text-left">
-              <h3 className="text-xl font-black uppercase italic tracking-tighter text-white">Ils nous ont fait confiance</h3>
-            </div>
-          </div>
-          <ChevronRight size={24} className="text-gray-400 group-hover:translate-x-1 transition-transform" />
-        </button>
-
-        {/* Collaborer avec un créateur Shortcut */}
-        <button 
-          onClick={onCollaborateClick}
-          className="w-full glass-card p-6 rounded-[40px] border-white/10 bg-gradient-to-br from-purple-500/10 to-transparent flex items-center justify-between group active:scale-95 transition-all shadow-xl"
-        >
-          <div className="flex items-center gap-5">
-            <div className="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center text-purple-400 shadow-lg group-hover:rotate-12 transition-transform">
-              <Video size={28} />
-            </div>
-            <div className="text-left">
-              <h3 className="text-xl font-black uppercase italic tracking-tighter text-white">Collaborer avec un créateur</h3>
-            </div>
-          </div>
-          <ChevronRight size={24} className="text-purple-400 group-hover:translate-x-1 transition-transform" />
-        </button>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative rounded-[48px] overflow-hidden bg-white p-10 mt-2 shadow-[0_20px_50px_rgba(0,0,0,0.1)] text-center border-b-8 border-black/5">
+      {/* Hero Section - Moved up below Espace Membre */}
+      <section className="relative rounded-[48px] overflow-hidden bg-white p-10 shadow-[0_20px_50px_rgba(0,0,0,0.1)] text-center border-b-8 border-black/5 mx-1">
         {/* Animated Background Orbs */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#FFB000]/10 rounded-full blur-[80px] animate-pulse"></div>
@@ -127,9 +95,8 @@ const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
-      {/* Action Buttons Section */}
-      <section className="px-1 space-y-4">
-        {/* S'inscrire Shortcut */}
+      <div className="px-1 space-y-4">
+        {/* S'inscrire Shortcut - Moved up */}
         <button 
           onClick={onMembershipOfferClick}
           className="w-full glass-card p-6 rounded-[40px] border-[#FFB000]/40 bg-gradient-to-br from-[#FFB000]/20 to-transparent flex items-center justify-between group active:scale-95 transition-all shadow-xl animate-pulse"
@@ -144,6 +111,42 @@ const HomeView: React.FC<HomeViewProps> = ({
           </div>
           <ChevronRight size={24} className="text-[#FFB000] group-hover:translate-x-1 transition-transform" />
         </button>
+
+        {/* Ils nous ont fait confiance Shortcut */}
+        <button 
+          onClick={onAllFormationsClick}
+          className="w-full glass-card p-6 rounded-[40px] border-white/10 bg-white/5 flex items-center justify-between group active:scale-95 transition-all shadow-xl"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-14 h-14 bg-gray-800 rounded-2xl flex items-center justify-center text-[#FFB000] shadow-lg group-hover:rotate-12 transition-transform">
+              <Eye size={28} />
+            </div>
+            <div className="text-left">
+              <h3 className="text-xl font-black uppercase italic tracking-tighter text-white">Ils nous ont fait confiance</h3>
+            </div>
+          </div>
+          <ChevronRight size={24} className="text-gray-400 group-hover:translate-x-1 transition-transform" />
+        </button>
+
+        {/* Collaborer avec un créateur Shortcut */}
+        <button 
+          onClick={onCollaborateClick}
+          className="w-full glass-card p-6 rounded-[40px] border-white/10 bg-gradient-to-br from-purple-500/10 to-transparent flex items-center justify-between group active:scale-95 transition-all shadow-xl"
+        >
+          <div className="flex items-center gap-5">
+            <div className="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center text-purple-400 shadow-lg group-hover:rotate-12 transition-transform">
+              <Video size={28} />
+            </div>
+            <div className="text-left">
+              <h3 className="text-xl font-black uppercase italic tracking-tighter text-white">Collaborer avec un créateur</h3>
+            </div>
+          </div>
+          <ChevronRight size={24} className="text-purple-400 group-hover:translate-x-1 transition-transform" />
+        </button>
+      </div>
+
+      {/* Action Buttons Section */}
+      <section className="px-1 space-y-4">
       </section>
     </div>
   );

@@ -1,0 +1,7 @@
+{
+  "name": "Remix: LAYI",
+  "description": "EXPERT. SNAPCHAT. Si tu souhaites te lancer, n’hésite pas à me contacter.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

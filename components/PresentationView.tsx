@@ -89,13 +89,13 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
           <div className="relative z-10 space-y-4">
             <div className="inline-flex items-center gap-2 bg-[#FFB000]/10 border border-[#FFB000]/20 px-4 py-1.5 rounded-full">
               <Sparkles size={14} className="text-[#FFB000]" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-[#FFB000]">OFFRE EXCLUSIVE</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-[#FFB000]">Offre valable jusqu’au vendredi 6 mars 2026 à 20h</span>
             </div>
             
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-3">
-                <span className="text-gray-500 line-through text-2xl font-black italic">365€</span>
-                <span className="text-5xl font-[950] text-white italic tracking-tighter">250€</span>
+                <span className="text-gray-500 line-through text-2xl font-black italic">250€</span>
+                <span className="text-5xl font-[950] text-white italic tracking-tighter">150€</span>
               </div>
               <p className="text-[#FFB000] text-[11px] font-black uppercase tracking-widest italic">Devenez un expert snapchat</p>
             </div>
@@ -194,8 +194,8 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
                 "Méthodes pour atteindre la monétisation",
                 "Méthode pour demander la certification (si éligible) ⭐",
                 "Méthodes pour créer du bon contenu",
-                "Accès à l’application pour les membres Layi*",
-                "Accès aux différents lives de formation pour rester informé des nouveautés Snapchat (membres Layi)*",
+                "référencement de votre compte sur notre application",
+                "Accès aux différents lives de formation pour rester informé des nouveautés Snapchat",
                 "Accès à nos avantages partenaires pour les membres Layi (réductions d’hôtel, location de voiture, etc.)"
               ].map((feature, i) => (
                 <div key={i} className="flex items-start gap-4 py-3 border-b border-white/5 last:border-0">
@@ -441,7 +441,7 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
                         </div>
                       )}
                     </div>
-                  ) : feature === "Accès à l’application pour les membres Layi*" ? (
+                  ) : feature === "référencement de votre compte sur notre application" ? (
                     <div className="flex-1 space-y-3">
                       <div className="flex items-center justify-between gap-2">
                         <p className="text-[11px] font-bold text-gray-300 uppercase tracking-tight leading-relaxed italic">
@@ -467,7 +467,7 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
                         </div>
                       )}
                     </div>
-                  ) : feature === "Accès aux différents lives de formation pour rester informé des nouveautés Snapchat (membres Layi)*" ? (
+                  ) : feature === "Accès aux différents lives de formation pour rester informé des nouveautés Snapchat" ? (
                     <div className="flex-1 space-y-3">
                       <div className="flex items-center justify-between gap-2">
                         <p className="text-[11px] font-bold text-gray-300 uppercase tracking-tight leading-relaxed italic">

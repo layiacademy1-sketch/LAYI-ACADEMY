@@ -39,19 +39,6 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
   // Mock data
   const [clients, setClients] = useState<Client[]>([
     {
-      id: 'bw-transport',
-      name: 'BW TRANSPORT',
-      phone: '+86 198 6407 3740',
-      address: 'Guangzhou, Chine',
-      email: 'Non communiqué',
-      snapchat: 'lachine75000',
-      amountPaid: '0',
-      serviceType: 'Formation Snapchat',
-      description: 'Client basé en Chine, spécialisé dans le transport de marchandises vers la France.',
-      status: 'registered',
-      assignedTo: 'rabab'
-    },
-    {
       id: 'dalila',
       name: 'DALILA',
       phone: '07 68 57 99 93',
@@ -60,7 +47,7 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
       snapchat: 'dzdal',
       amountPaid: 'Payé',
       serviceType: 'Création de site internet',
-      description: 'Elle a déjà payé et souhaite maintenant réaliser son site internet. Le paiement a été effectué par une autre personne pour elle. La cliente a uniquement payé pour un site vitrine, donc il faut parler seulement du site vitrine. Si elle souhaite ajouter une partie vente (e-commerce), prends les informations nécessaires et dis-lui que tu vas en parler avec le designer. Pense aussi à t’excuser pour le retard : tu devais l’appeler, mais malheureusement, suite à un décès, tu n’as pas pu le faire.',
+      description: 'Elle a déjà payé et souhaite maintenant réaliser son site internet. Le paiement a été effectué par une autre personne pour elle. La cliente a uniquement payé pour un site vitrine, donc il faut parler seulement du site vitrine. Si elle souhaite ajouter une partie vente (e-commerce), prends les informations nécessaires et dis-lui que tu vas en parler avec le designer. Pense aussi à t’excuser pour le retard : tu devais l’appeler, mais malheureusement, suite à un décès, tu n’as pas pu le faire. Hajar a essayé de contacter le client par WhatsApp le vendredi 27 février, mais n’a pas eu de réponse. Prochaine relance : vendredi 6 mars.',
       status: 'registered',
       assignedTo: 'hajar'
     },
@@ -112,7 +99,7 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
       snapchat: 'derkafuego',
       amountPaid: '150 €',
       serviceType: 'Formation Snapchat',
-      description: 'À contacter vers le 10 mars. Un tarif préférentiel lui a été accordé : 150 € au lieu de 250 € pour la formation.',
+      description: 'À contacter vers le 10 mars. Un tarif préférentiel lui a été accordé : 150 € au lieu de 250 € pour la formation. Djo a contacter le client le 5 mars 2026 et il nous a dit qu\'il attend qu\'il puisse récupérer son snapchat bloquer et il a dit il nous recontacte le 14 mars',
       status: 'to_contact',
       assignedTo: 'djo'
     },

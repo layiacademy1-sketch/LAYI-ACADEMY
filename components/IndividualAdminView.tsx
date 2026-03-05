@@ -69,24 +69,7 @@ const IndividualAdminView: React.FC<IndividualAdminViewProps> = ({ adminName, on
     window.open(`https://wa.me/${LAYI_WHATSAPP}?text=${message}`, '_blank');
   };
 
-  const rababClients = [
-    { id: 'rc1', name: 'Andronic Andreia', email: 'smm@monaco.mc', invoice: '150 €', status: 'Payé', factureInfo: 'Formation snapchat' },
-    { id: 'rc2', name: 'Antoine Absoir', email: 'gari35975@gmail.com', invoice: '250 €', status: 'Payé', factureInfo: 'Formation snapchat' },
-    { 
-      id: 'rc3', 
-      name: 'Anaelle Tournier', 
-      email: 'okurtos3300@gmail.com', 
-      phone: '06 08 63 06 44', 
-      invoice: '250 €', 
-      status: 'Payé',
-      excelLines: [
-        { label: "Création de site", amount: "250 €" },
-        { label: "Hébergement inclus pour 1 an", amount: "0 €" },
-        { label: "Nom de domaine inclus pour 1 an", amount: "0 €" }
-      ]
-    },
-    { id: 'rc4', name: 'Kadoussi Fouadi', email: 'fouadikadoussi@gmail.com', invoice: '250 €', status: 'Payé', factureInfo: 'Formation snapchat' },
-  ];
+  const rababClients: any[] = [];
 
   const sortedHistory = [...(data.history || [])].sort((a, b) => {
     if (b.date !== a.date) return b.date - a.date;
@@ -326,10 +309,18 @@ const IndividualAdminView: React.FC<IndividualAdminViewProps> = ({ adminName, on
               {isHajar && (
                 <div className="space-y-3 mb-6">
                   {[
-                    { id: 'hc1', title: 'Client 1 pour site', location: 'Belgique', whatsapp: '0485 60 44 01', waLink: '32485604401' },
+                    { 
+                      id: 'hc1', 
+                      title: 'Client de Hajar', 
+                      location: 'Belgique',
+                      whatsapp: '0485 60 44 01', 
+                      waLink: '32485604401',
+                      description: 'Informations client : Hajar a essayé de contacter le client par WhatsApp le vendredi 27 février, mais n’a pas eu de réponse. Prochaine relance : vendredi 6 mars.'
+                    },
                     { 
                       id: 'hc2', 
                       title: 'Client 2 pour site', 
+                      location: undefined,
                       whatsapp: '07 68 57 99 93', 
                       waLink: '33768579993', 
                       description: 'Son frère a déjà payé depuis longtemps, mais elle était occupée. Elle nous avait indiqué qu’elle nous contacterait en janvier pour la création du site. Pour le moment, il s’agit simplement de récupérer les informations nécessaires à la réalisation du site.' 
@@ -337,6 +328,7 @@ const IndividualAdminView: React.FC<IndividualAdminViewProps> = ({ adminName, on
                     { 
                       id: 'hc3', 
                       title: 'Client 3 pour site', 
+                      location: undefined,
                       whatsapp: '07 66 56 44 87', 
                       waLink: '33766564487', 
                       description: 'Nom : THE NMB. Il nous a demandé en janvier de renvoyer le devis. Je l’ai renvoyé sur Snapchat, mais depuis il nous a dit qu’il nous tiendrait informés. Étant donné que nous sommes à la fin du mois, il faut envoyer un message sur WhatsApp pour vérifier ce qu’il en est.' 
@@ -466,10 +458,10 @@ const IndividualAdminView: React.FC<IndividualAdminViewProps> = ({ adminName, on
                   {[
                     { 
                       id: 'dc1', 
-                      title: 'Client 1 pour site', 
-                      name: 'HACHIM Moeva', 
-                      description: 'Site internet à faire', 
-                      contact: 'Snapchat LE H' 
+                      title: 'Client Derka', 
+                      name: 'Derka', 
+                      description: "Informations client : Djo a contacter le client le 5 mars 2026 et il nous a dit qu'il attend qu'il puisse recuperer son snapchat bloquer et il a dit il nous recontacte le 14 mars", 
+                      contact: 'Snapchat' 
                     }
                   ].map((client) => {
                     const isOpen = openClientId === client.id;

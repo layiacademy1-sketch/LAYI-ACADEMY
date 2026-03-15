@@ -12,7 +12,7 @@ const TrainingLivesView: React.FC<TrainingLivesViewProps> = ({ onBack, isMember,
   const lives = [
     {
       id: 'l1',
-      title: "Formation apporteur d’affaires (Formation Snapchat)",
+      title: "Formation apporteur d’affaires (Formation & stratégie Snapchat)",
       date: "Vendredi 20 Février",
       time: "21:30",
       description: "Apprenez les bases de la recommandation stratégique pour nos formations Snapchat."

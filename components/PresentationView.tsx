@@ -74,7 +74,7 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
           <ArrowLeft size={20} />
         </button>
         <div>
-          <h2 className="text-xl font-black uppercase italic tracking-tighter text-white">Formation Snapchat</h2>
+          <h2 className="text-xl font-black uppercase italic tracking-tighter text-white">Formation & stratégie Snapchat</h2>
           <p className="text-[10px] text-[#FFB000] font-black uppercase tracking-widest italic">L'expertise RAPIDES</p>
         </div>
       </div>
@@ -89,13 +89,13 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
           <div className="relative z-10 space-y-4">
             <div className="inline-flex items-center gap-2 bg-[#FFB000]/10 border border-[#FFB000]/20 px-4 py-1.5 rounded-full">
               <Sparkles size={14} className="text-[#FFB000]" />
-              <span className="text-[10px] font-black uppercase tracking-widest text-[#FFB000]">Offre valable jusqu’au vendredi 6 mars 2026 à 20h</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-[#FFB000]">Offre exclusive</span>
             </div>
             
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-3">
-                <span className="text-gray-500 line-through text-2xl font-black italic">250€</span>
-                <span className="text-5xl font-[950] text-white italic tracking-tighter">150€</span>
+                <span className="text-gray-500 line-through text-2xl font-black italic">499,99€</span>
+                <span className="text-5xl font-[950] text-white italic tracking-tighter">250€</span>
               </div>
               <p className="text-[#FFB000] text-[11px] font-black uppercase tracking-widest italic">Devenez un expert snapchat</p>
             </div>
@@ -194,8 +194,7 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
                 "Méthodes pour atteindre la monétisation",
                 "Méthode pour demander la certification (si éligible) ⭐",
                 "Méthodes pour créer du bon contenu",
-                "référencement de votre compte sur notre application",
-                "Accès aux différents lives de formation pour rester informé des nouveautés Snapchat",
+                "Intégration dans notre canal WhatsApp.",
                 "Accès à nos avantages partenaires pour les membres Layi (réductions d’hôtel, location de voiture, etc.)"
               ].map((feature, i) => (
                 <div key={i} className="flex items-start gap-4 py-3 border-b border-white/5 last:border-0">
@@ -441,7 +440,7 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
                         </div>
                       )}
                     </div>
-                  ) : feature === "référencement de votre compte sur notre application" ? (
+                  ) : feature === "Intégration dans notre canal WhatsApp." ? (
                     <div className="flex-1 space-y-3">
                       <div className="flex items-center justify-between gap-2">
                         <p className="text-[11px] font-bold text-gray-300 uppercase tracking-tight leading-relaxed italic">
@@ -460,33 +459,9 @@ const PresentationView: React.FC<PresentationViewProps> = ({ onBack, onWebsiteCl
                         <div className="bg-black/40 border border-[#FFB000]/20 p-5 rounded-[24px] animate-in slide-in-from-top-2 duration-500 shadow-2xl">
                           <p className="text-[10px] text-gray-400 font-medium italic leading-relaxed">
                             <span className="text-[#FFB000] font-black uppercase tracking-widest block mb-2">Description :</span>
-                            Après la formation, nous vous enregistrerons sur notre application afin de vous permettre d’être visible et repéré par les autres membres que nous avons formés.
+                            Après la formation, nous allons vous intégrer dans notre canal WhatsApp afin de rester informé des dernières fonctionnalités et options de Snapchat.
                             <br /><br />
-                            Cela vous permettra également d’être référencé en tant que compte Snapchat de confiance et de gagner en crédibilité auprès de la communauté.
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  ) : feature === "Accès aux différents lives de formation pour rester informé des nouveautés Snapchat" ? (
-                    <div className="flex-1 space-y-3">
-                      <div className="flex items-center justify-between gap-2">
-                        <p className="text-[11px] font-bold text-gray-300 uppercase tracking-tight leading-relaxed italic">
-                          {feature}
-                        </p>
-                        <button 
-                          onClick={() => setShowLivesInfo(!showLivesInfo)}
-                          className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 rounded-full text-[8px] font-black text-[#FFB000] uppercase tracking-widest italic hover:bg-white/10 transition-all border border-white/5"
-                        >
-                          {showLivesInfo ? <ChevronUp size={10} /> : <Info size={10} />}
-                          {showLivesInfo ? "Fermer" : "Plus d'info"}
-                        </button>
-                      </div>
-                      
-                      {showLivesInfo && (
-                        <div className="bg-black/40 border border-[#FFB000]/20 p-5 rounded-[24px] animate-in slide-in-from-top-2 duration-500 shadow-2xl">
-                          <p className="text-[10px] text-gray-400 font-medium italic leading-relaxed">
-                            <span className="text-[#FFB000] font-black uppercase tracking-widest block mb-2">Description :</span>
-                            Chez Layi, nous ne vous abandonnons pas après la formation. Nous continuons de vous accompagner à travers différents lives et formations, afin de rester à jour sur l’algorithme de Snapchat, de découvrir les nouvelles méthodes et de maximiser vos résultats.
+                            Cela vous permettra également d’être référencé comme compte Snapchat de confiance et de gagner en crédibilité auprès de la communauté.
                           </p>
                         </div>
                       )}

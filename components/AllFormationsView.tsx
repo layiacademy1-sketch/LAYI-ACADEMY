@@ -8,7 +8,7 @@ interface AllFormationsViewProps {
 
 const AllFormationsView: React.FC<AllFormationsViewProps> = ({ onBack }) => {
   const formations = [
-    { title: "Formation Snapchat", icon: <Zap size={24} />, color: "bg-yellow-500" },
+    { title: "Formation & stratégie Snapchat", icon: <Zap size={24} />, color: "bg-yellow-500" },
     { title: "Formation création de site internet", icon: <Globe size={24} />, color: "bg-blue-500" },
     { title: "Formation création de logo", icon: <Palette size={24} />, color: "bg-pink-500" },
     { title: "Formation création d’association", icon: <Users size={24} />, color: "bg-green-500" },

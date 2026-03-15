@@ -32,15 +32,6 @@ const HomeView: React.FC<HomeViewProps> = ({
     <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-700 pb-20">
       {/* Admin & Member Access Section */}
       <div className="px-1 pt-2 space-y-4">
-        <button 
-          onClick={onAdminDashboardClick}
-          className="w-full py-4 rounded-[28px] border border-blue-500/20 bg-blue-500/5 text-[10px] font-black uppercase tracking-[0.2em] text-blue-400/70 hover:text-white hover:border-blue-400 hover:bg-blue-600/20 transition-all flex items-center justify-center gap-3 group active:scale-95 relative overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/5 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
-          <ShieldCheck size={16} className="text-blue-400/50 group-hover:text-white transition-colors" />
-          <span className="relative z-10">Accès Admin</span>
-        </button>
-
         {/* ESPACE Membre Shortcut - Moved below Admin */}
         <button 
           onClick={onMemberAccessClick}
@@ -75,7 +66,7 @@ const HomeView: React.FC<HomeViewProps> = ({
           <div className="space-y-6 w-full">
             <h1 className="flex flex-col items-center gap-2">
               <span className="text-[32px] font-[950] leading-tight tracking-tighter text-black uppercase italic text-center">
-                Formation Snapchat <br />
+                Formation & stratégie Snapchat <br />
                 <span className="text-[#FFB000] animate-pulse inline-block transform hover:scale-110 transition-transform duration-500">N°1 en France</span>
               </span>
             </h1>

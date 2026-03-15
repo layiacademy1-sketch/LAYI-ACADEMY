@@ -40,7 +40,7 @@ const MembershipOfferView: React.FC<MembershipOfferViewProps> = ({ onBack, onVie
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-3">
                 <span className="text-gray-500 line-through text-2xl font-black italic">365€</span>
-                <span className="text-5xl font-[950] text-white italic tracking-tighter">150€</span>
+                <span className="text-5xl font-[950] text-white italic tracking-tighter">250€</span>
               </div>
               <p className="text-[#FFB000] text-[11px] font-black uppercase tracking-widest italic">Accès complet à l'application</p>
             </div>

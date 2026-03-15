@@ -59,7 +59,7 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
       email: 'Non communiqué',
       snapchat: 'ppepeross_off',
       amountPaid: '250 €',
-      serviceType: 'Formation Snapchat',
+      serviceType: 'Formation & stratégie Snapchat',
       description: 'Il va nous tenir informé pour début mars, à contacté le 10 mars si pas de retour.',
       status: 'to_contact',
       assignedTo: 'djo'
@@ -72,7 +72,7 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
       email: 'Non communiqué',
       snapchat: 'Non communiqué',
       amountPaid: '0',
-      serviceType: 'Formation Snapchat',
+      serviceType: 'Formation & stratégie Snapchat',
       description: 'Il a indiqué qu’il allait nous contacter début mars. Si nous n’avons pas de nouvelles, il faudra le recontacter vers le 5 mars.',
       status: 'to_contact',
       assignedTo: 'djo'
@@ -85,7 +85,7 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
       email: 'Non communiqué',
       snapchat: 'lavage782',
       amountPaid: '0',
-      serviceType: 'Formation Snapchat',
+      serviceType: 'Formation & stratégie Snapchat',
       description: 'Le client est actuellement à l’étranger et revient le 12 mars. Il faudra donc le contacter le 15 mars concernant la formation Snapchat.',
       status: 'to_contact',
       assignedTo: 'djo'
@@ -97,9 +97,9 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
       address: 'Non communiqué',
       email: 'Non communiqué',
       snapchat: 'derkafuego',
-      amountPaid: '150 €',
-      serviceType: 'Formation Snapchat',
-      description: 'À contacter vers le 10 mars. Un tarif préférentiel lui a été accordé : 150 € au lieu de 250 € pour la formation. Djo a contacter le client le 5 mars 2026 et il nous a dit qu\'il attend qu\'il puisse récupérer son snapchat bloquer et il a dit il nous recontacte le 14 mars',
+      amountPaid: '250 €',
+      serviceType: 'Formation & stratégie Snapchat',
+      description: 'À contacter vers le 10 mars. Un tarif préférentiel lui a été accordé : 250 € au lieu de 499,99 € pour la formation. Djo a contacter le client le 5 mars 2026 et il nous a dit qu\'il attend qu\'il puisse récupérer son snapchat bloquer et il a dit il nous recontacte le 14 mars',
       status: 'to_contact',
       assignedTo: 'djo'
     },
@@ -177,7 +177,7 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
           <ArrowLeft size={20} />
         </button>
         <div className="text-right">
-          <h2 className="text-xl font-black uppercase italic tracking-tighter text-white">Formation Snapchat</h2>
+          <h2 className="text-xl font-black uppercase italic tracking-tighter text-white">Formation & stratégie Snapchat</h2>
         </div>
       </div>
 
@@ -374,7 +374,7 @@ const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack }) => {
                     <MessageSquare size={32} fill="currentColor" />
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-xl font-black uppercase italic tracking-tighter text-white">Formation Snapchat</h4>
+                    <h4 className="text-xl font-black uppercase italic tracking-tighter text-white">Formation & stratégie Snapchat</h4>
                     <p className="text-2xl font-black text-[#FFB000] italic">250 €</p>
                   </div>
                 </div>
